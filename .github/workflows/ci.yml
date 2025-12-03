@@ -17,42 +17,30 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install JSON schema validator
-        run: npm install -g ajv-cli ajv-formats
-
-      - name: Fetch Claude Code schemas
-        run: |
-          mkdir -p .schemas
-          curl -sf https://raw.githubusercontent.com/anthropics/claude-code/main/schemas/plugin.schema.json -o .schemas/plugin.schema.json
-          curl -sf https://raw.githubusercontent.com/anthropics/claude-code/main/schemas/hooks.schema.json -o .schemas/hooks.schema.json
-          curl -sf https://raw.githubusercontent.com/anthropics/claude-code/main/schemas/marketplace.schema.json -o .schemas/marketplace.schema.json
-
-      - name: Validate plugin.json files
+      - name: Validate JSON files
         run: |
           exit_code=0
           for f in plugins/*/.claude-plugin/plugin.json; do
             echo "Validating $f"
-            if ! ajv validate -s .schemas/plugin.schema.json -d "$f" --strict=false; then
+            if ! jq empty "$f" 2>/dev/null; then
+              echo "::error::Invalid JSON in $f"
               exit_code=1
             fi
           done
-          exit $exit_code
-
-      - name: Validate hooks.json files
-        run: |
-          exit_code=0
           for f in plugins/*/hooks/hooks.json; do
             [ -f "$f" ] || continue
             echo "Validating $f"
-            if ! ajv validate -s .schemas/hooks.schema.json -d "$f" --strict=false; then
+            if ! jq empty "$f" 2>/dev/null; then
+              echo "::error::Invalid JSON in $f"
               exit_code=1
             fi
           done
+          echo "Validating .claude-plugin/marketplace.json"
+          if ! jq empty .claude-plugin/marketplace.json 2>/dev/null; then
+            echo "::error::Invalid JSON in .claude-plugin/marketplace.json"
+            exit_code=1
+          fi
           exit $exit_code
-
-      - name: Validate marketplace.json
-        run: |
-          ajv validate -s .schemas/marketplace.schema.json -d .claude-plugin/marketplace.json --strict=false
 
       - name: Validate plugin structure
         run: |

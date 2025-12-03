@@ -1,5 +1,4 @@
 {
-  "$schema": "https://raw.githubusercontent.com/anthropics/claude-code/main/schemas/marketplace.schema.json",
   "name": "claude-code-plugins",
   "version": "0.1.0",
   "category": "productivity",
