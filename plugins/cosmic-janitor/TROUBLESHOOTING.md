@@ -105,8 +105,8 @@ The `SessionStart` hook failed to inject the system instructions, or the context
 
 **Diagnostics:**
 
-1. **Reset the session:**
-   Run `/reset`. The hook only fires at the *start* of a session (or after a reset). Old sessions retain old personas.
+1. **Start a new session:**
+   Exit Claude Code and restart it. The hook only fires at session start. Old sessions retain old personas.
 2. **Check Hook Configuration:**
    Inspect the plugin's hook registration (path depends on your OS/install method, usually `~/.claude/plugins/...`).
    Ensure `hooks.json` references the SessionStart hook:
@@ -146,7 +146,7 @@ The injection payload contains unescaped characters that broke the JSON structur
 
 **Symptoms:**
 
-- 1-2 second delay when starting a new session or running `/reset`.
+- 1-2 second delay when starting a new session.
 
 **Cause:**
 **Context Injection.** The plugin is loading the system instructions (Sutras, Protocols, Cosmology) into the model's ephemeral memory.
@@ -198,7 +198,7 @@ This is the **Protocol of Zero-Waste**. We prioritize the artifact (the code) ov
 
 **Before Reporting:**
 
-1. Run `/reset` to clear context.
+1. Exit and restart Claude Code to start a fresh session.
 2. Verify you are not experiencing [Behavior Shock](#behavior-shock).
 3. Run `/plugin list` to confirm the plugin is enabled and current.
 

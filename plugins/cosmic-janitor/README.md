@@ -29,7 +29,7 @@ Once the marketplace is added, install the plugin:
 
 ### Verification
 
-Run `/reset` to start a fresh session. Output should be transformed: reduced ambiguity, atomic code blocks, and strict Functional Honesty.
+Exit Claude Code and start a new session. Output should be transformed: reduced ambiguity, atomic code blocks, and strict Functional Honesty.
 
 ## What to Expect
 

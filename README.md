@@ -37,7 +37,7 @@ Alternatively, you can browse interactively:
 
 ### Verification
 
-Run `/reset` to start a fresh session. Test the transformation:
+Exit Claude Code and start a new session. Test the transformation:
 
 **Input:** "Create a hello world function"
 
