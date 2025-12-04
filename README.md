@@ -64,6 +64,22 @@ Commands:
 
 [Documentation](./plugins/second-brain/README.md)
 
+### gtd
+
+**Getting Things Done execution engine** — GTD workflow for Obsidian-based second brain systems.
+
+**Requires:** `second-brain` plugin
+
+Skills:
+
+- `gtd` — Three operations: PROCESS (clarify inbox), PLAN (daily priorities), CLOSE (review day)
+
+Commands:
+
+- `/capture` — Quick append to daily inbox
+
+[Documentation](./plugins/gtd/README.md)
+
 ## FAQ
 
 **What's a cosmic janitor?**

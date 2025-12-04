@@ -26,6 +26,12 @@
       "source": "./plugins/second-brain",
       "version": "0.1.0",
       "description": "Knowledge capture and intelligence extraction for Obsidian-based systems"
+    },
+    {
+      "name": "gtd",
+      "source": "./plugins/gtd",
+      "version": "0.1.0",
+      "description": "Getting Things Done execution engine for Obsidian-based systems"
     }
   ],
   "keywords": [
