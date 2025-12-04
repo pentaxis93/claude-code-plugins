@@ -19,12 +19,7 @@
     "atomic-notes"
   ],
   "license": "MIT",
-  "components": {
-    "hooks": "./hooks/hooks.json",
-    "commands": "./commands",
-    "skills": "./skills"
-  },
-  "engines": {
-    "claude-code": ">=1.0.0"
-  }
+  "hooks": "./hooks/hooks.json",
+  "commands": "./commands",
+  "skills": "./skills"
 }

@@ -18,14 +18,9 @@
     "second-brain"
   ],
   "license": "MIT",
-  "components": {
-    "commands": "./commands",
-    "skills": "./skills"
-  },
+  "commands": "./commands",
+  "skills": "./skills",
   "dependencies": {
     "plugins": ["second-brain"]
-  },
-  "engines": {
-    "claude-code": ">=1.0.0"
   }
 }
