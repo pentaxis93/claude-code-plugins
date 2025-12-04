@@ -1,0 +1,31 @@
+{
+  "name": "gtd",
+  "version": "0.1.0",
+  "description": "Getting Things Done execution engine for Obsidian-based systems",
+  "author": {
+    "name": "pentaxis93",
+    "email": "kcmdwrrya@mozmail.com",
+    "url": "https://github.com/pentaxis93"
+  },
+  "repository": "https://github.com/pentaxis93/claude-code-plugins",
+  "homepage": "https://github.com/pentaxis93/claude-code-plugins#gtd",
+  "keywords": [
+    "gtd",
+    "getting-things-done",
+    "productivity",
+    "task-management",
+    "obsidian",
+    "second-brain"
+  ],
+  "license": "MIT",
+  "components": {
+    "commands": "./commands",
+    "skills": "./skills"
+  },
+  "dependencies": {
+    "plugins": ["second-brain"]
+  },
+  "engines": {
+    "claude-code": ">=1.0.0"
+  }
+}
