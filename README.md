@@ -43,6 +43,7 @@ Or browse interactively:
 Current programs:
 
 - `observe-self` — Four-pass topology extraction for encoding cognitive methods as skills
+- `prism` — Multi-lens analysis for extracting maximum value from complex captures
 
 [Documentation](./plugins/construct/README.md)
 
