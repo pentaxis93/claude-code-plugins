@@ -32,7 +32,40 @@ WITNESS → LOCATE → MAP → ENCODE
 
 ---
 
-*More programs to come.*
+### prism
+
+Split complex captures into spectrum of perspectives via multi-lens analysis.
+
+**Invoke:** `prism`, "analyze from multiple angles", "process comprehensively", "extract all value"
+
+**The Three Phases:**
+
+```text
+RECON → EXTRACT → INTEGRATE
+```
+
+1. **RECON** — Survey terrain. Identify content types. Select lenses.
+2. **EXTRACT** — One pass per lens. Each reveals what others miss.
+3. **INTEGRATE** — Cross-link outputs. Route to destinations. Delete source.
+
+**The 10 Lenses:**
+
+| Lens | Extracts |
+|------|----------|
+| Actionable | Tasks, next actions |
+| Timeline | Urgency, deadlines |
+| Relationship | People commitments |
+| Decision | Choices, rationale |
+| Content | Themes, ideas |
+| Learning | Insights, questions |
+| Resource | Tools, materials |
+| Strategic | Big picture, frameworks |
+| Pattern | Recurring themes |
+| Emotional | Energy, motivation |
+
+**Use for:** Voice transcriptions, brain dumps, strategic sessions, any rich capture.
+
+---
 
 ## Managing Changes
 
