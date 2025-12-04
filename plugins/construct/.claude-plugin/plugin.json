@@ -16,10 +16,14 @@
     "self-observation",
     "fourth-way",
     "skill-extraction",
-    "topology-extraction"
+    "topology-extraction",
+    "system-observation",
+    "self-remembering",
+    "feedback-loop"
   ],
   "license": "MIT",
   "components": {
+    "hooks": "./hooks/hooks.json",
     "skills": "./skills"
   },
   "engines": {

@@ -67,6 +67,65 @@ RECON → EXTRACT → INTEGRATE
 
 ---
 
+### observe-system
+
+Close the feedback loop — observe system production, trace usage, diagnose decay, prescribe action.
+
+**Requires:** `second-brain` plugin with `setupComplete: true`
+
+**Invoke:** `observe system`, `system health`, `knowledge audit`, `what's decaying`
+
+**The Four Passes:**
+
+```text
+INVENTORY → TRACE → DIAGNOSE → PRESCRIBE
+```
+
+1. **INVENTORY** — Catalog system production. What has been created?
+2. **TRACE** — Track usage and references. What gets used vs. sits dormant?
+3. **DIAGNOSE** — Detect decay and dysfunction. What's failing?
+4. **PRESCRIBE** — Generate actionable recommendations. What to prune, revive, fuse?
+
+**Diagnosis Codes:**
+
+| Code | Meaning |
+|------|---------|
+| `DORMANT_FRAMEWORK` | Framework not referenced in 4+ weeks |
+| `STALE_PATTERN` | Pattern not in debriefs for 6+ weeks |
+| `UNUSED_SKILL` | Skill never invoked after creation |
+| `ORPHANED_NOTE` | Permanent note with 0 backlinks |
+| `OVERPLANNING` | Plan completion rate < 30% |
+
+**Output:** System observation report to `Archives/Intelligence/system-health/`.
+
+---
+
+## System Self-Remembering
+
+The `construct` plugin includes a **SessionStart hook** that provides continuous light awareness.
+
+```text
+Pulse (every session) → flags issues → triggers observe-system (monthly)
+```
+
+**Two-Layer Awareness:**
+
+| Layer | Mechanism | Frequency |
+|-------|-----------|-----------|
+| **Pulse** | SessionStart hook | Every session (~2s) |
+| **Deep** | observe-system skill | On-demand |
+
+The pulse checks:
+
+- Artifact counts (frameworks, patterns, permanent notes)
+- Last observation date (warns if stale > 4 weeks)
+
+When pulse shows `Attention Needed`, run full `observe system`.
+
+This mirrors Gurdjieff's **self-remembering**: constant divided attention (pulse) + intentional self-observation (skill).
+
+---
+
 ## Managing Changes
 
 - **Disable:** `/plugin disable construct`
