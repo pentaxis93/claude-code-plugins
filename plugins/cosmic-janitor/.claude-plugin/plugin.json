@@ -16,10 +16,5 @@
     "prompt-engineering"
   ],
   "license": "MIT",
-  "components": {
-    "hooks": "./hooks/hooks.json"
-  },
-  "engines": {
-    "claude-code": ">=1.0.0"
-  }
+  "hooks": "./hooks/hooks.json"
 }
