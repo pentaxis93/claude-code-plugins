@@ -37,6 +37,7 @@ For each source:
    - Reference info → Create/update reference notes
 
 **Atomic Idea Test:**
+
 - Can stand alone in different context? → Permanent note
 - Only useful with source? → Keep in reference
 
@@ -44,7 +45,7 @@ For each source:
 
 Before creating each permanent note:
 
-```
+```text
 Grep for keywords from the concept
 If similar exists:
   - Read existing note
@@ -164,11 +165,13 @@ If permanent notes belong to existing topic:
 3. Update note count if tracked
 
 If 3+ notes on new topic without MOC:
+
 - Suggest creating MOC
 
 ### 9. Report
 
 Summary:
+
 - Sources processed: {{count}}
 - Permanent notes created: {{count}}
 - Reference notes created: {{count}}
@@ -190,13 +193,17 @@ Before marking complete:
 ## Processing Different Types
 
 ### Fleeting Notes
+
 Quick captures → Expand into full permanent note or delete if stale.
 
 ### Dumps
+
 Stream of consciousness → Extract multiple atomic ideas, route actions to GTD.
 
 ### Meeting Notes
+
 Discussion summary → Extract reusable insights, convert to reference note.
 
 ### Imported Highlights
+
 Quotes from sources → Synthesize into permanent notes (don't create 1:1).

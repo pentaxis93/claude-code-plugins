@@ -208,6 +208,7 @@ rm "{{dump_path}}"
 ```
 
 **Rationale:**
+
 - GTD canon: processed items leave system
 - Git preserves history if needed
 - Insights live in frameworks
@@ -294,6 +295,7 @@ Add to `_system/profile.md` under `## Active Knowledge Frameworks`:
 ### 8. Confirm
 
 Report:
+
 - Documents processed
 - Frameworks created/updated
 - Patterns identified

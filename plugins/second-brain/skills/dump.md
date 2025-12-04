@@ -30,6 +30,7 @@ Accept any format (voice transcript, rambling, mixed).
 ### 3. Analyze
 
 Extract:
+
 - **Themes:** 3-5 primary topics
 - **Questions:** Explicit and implicit
 - **Decisions:** Choices being considered

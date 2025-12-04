@@ -9,6 +9,7 @@ Config: `.claude/brain-config.json` → `brainFolder`
 ## Pre-flight
 
 Check `_system/profile.md` exists. If found:
+
 - Read user's name for personalization
 - Read active projects to review
 - Tailor questions to role
@@ -33,6 +34,7 @@ Lead through reflection questions. Conversational, not clinical.
 #### Overall Assessment
 
 **Ask:**
+
 - "Rate this week 1-5. Why that rating?"
 - "Biggest wins?"
 - "Main challenges?"
@@ -42,16 +44,19 @@ Lead through reflection questions. Conversational, not clinical.
 #### Domain Reviews
 
 **Personal:**
+
 - "How did you take care of yourself?"
 - "Energy levels and well-being?"
 - "Personal growth or insights?"
 
 **Professional:**
+
 - "What did you accomplish at work?"
 - "Team dynamics?"
 - "Professional development?"
 
 **Projects:** (for each active project)
+
 - "How did {{project}} progress?"
 - "What moved forward? What's blocking?"
 - "Any direction changes?"
@@ -59,6 +64,7 @@ Lead through reflection questions. Conversational, not clinical.
 #### Pattern Recognition
 
 **Ask:**
+
 - "Recurring themes in your dumps this week?"
 - "Energy variation throughout the week?"
 - "Connections between personal, professional, projects?"
@@ -69,6 +75,7 @@ Lead through reflection questions. Conversational, not clinical.
 #### Forward Planning
 
 **Ask:**
+
 - "Top 3 priorities for next week?"
 - "What to carry forward?"
 - "What to do differently?"
@@ -223,6 +230,7 @@ Next week is successful if:
 ## Conversational Guidelines
 
 **Do:**
+
 - Warm, empathetic tone
 - Thoughtful follow-ups
 - Help identify unseen patterns
@@ -230,6 +238,7 @@ Next week is successful if:
 - Acknowledge challenges honestly
 
 **Don't:**
+
 - Rush through questions
 - Judge their rating
 - Force positivity on tough weeks

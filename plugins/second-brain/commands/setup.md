@@ -36,7 +36,7 @@ Config: `.claude/brain-config.json`
 
 Check for installed plugins:
 
-```
+```text
 GTD: Glob for plugins/gtd/skills/gtd.md or .claude/plugins manifest
 ```
 
@@ -62,11 +62,13 @@ Extract: name, role, projects, interests, preferences.
 ### 3. Create Core Structure
 
 **System Files:**
+
 - `_system/profile.md`
 - `_system/interests.md`
 
 **Folders:**
-```
+
+```text
 _system/
 {{brainFolder}}/
 ├── 00-Inbox/
@@ -193,11 +195,11 @@ not done
 
 ## Inbox Count
 
-*Check 00-Inbox/ for unprocessed items*
+Check 00-Inbox/ for unprocessed items
 
 ---
 
-*Updated by GTD skill*
+Updated by GTD skill
 ```
 
 ### 2. Create Standard Areas
@@ -228,6 +230,7 @@ tags:
 ```
 
 **Health-Fitness.md:**
+
 ```markdown
 ---
 title: "Health & Fitness"
@@ -251,6 +254,7 @@ tags:
 ```
 
 **Personal-Development.md:**
+
 ```markdown
 ---
 title: "Personal Development"
@@ -274,6 +278,7 @@ tags:
 ```
 
 **Errands.md:**
+
 ```markdown
 ---
 title: "Errands"
@@ -292,6 +297,7 @@ tags:
 ```
 
 **Home.md:**
+
 ```markdown
 ---
 title: "Home"
@@ -317,7 +323,8 @@ tags:
 ### 3. Create GTD Inbox Structure
 
 Create folders if not exist:
-```
+
+```text
 {{brainFolder}}/00-Inbox/
 ├── Daily/
 └── Fleeting-Notes/
@@ -328,6 +335,7 @@ Create folders if not exist:
 Ask: "What's one thing you're working on that has multiple steps?"
 
 If provided:
+
 - Follow-up: "What does done look like?" + "What's the next physical action?"
 - Create `{{brainFolder}}/01-Projects/{{Name}}.md`:
 
@@ -386,6 +394,7 @@ Output: Summary of new files created.
 ### 1. Show Current State
 
 Read config + `_system/profile.md`. Display:
+
 - brainFolder
 - userName
 - Active project count
@@ -395,6 +404,7 @@ Read config + `_system/profile.md`. Display:
 ### 2. Ask What to Update
 
 Options:
+
 1. Personal context / profile
 2. Interests for recon
 3. Add relationships

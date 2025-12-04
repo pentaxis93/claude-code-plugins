@@ -15,7 +15,7 @@ Knowledge capture and intelligence extraction for Obsidian-based systems.
 
 **Skills:** Action workflows for knowledge lifecycle.
 
-```
+```text
 dump → [raw capture] → refine → [atomic notes] → fuse → [frameworks]
 recon → [intel report] ↗
 debrief → [weekly patterns] ↗

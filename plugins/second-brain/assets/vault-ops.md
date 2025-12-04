@@ -6,7 +6,7 @@
 
 ### Folder Structure
 
-```
+```text
 00-Inbox/           # Unprocessed captures
 01-Projects/        # Active projects (has deadline/end state)
 02-Areas/           # Ongoing responsibilities
@@ -35,6 +35,7 @@ Archives/           # Completed/inactive
 4. **100-300 words** - Exceptions for complex frameworks
 
 **Test:** "Can this idea stand alone in a different context?"
+
 - YES → Permanent note
 - NO → Keep in reference/project note
 
@@ -104,7 +105,8 @@ tags:
 **Tags = WHAT** (categorization). **Folders = WHERE** (organization).
 
 ### Status Tags
-```
+
+```text
 #status/fleeting
 #status/developing
 #status/active
@@ -112,7 +114,8 @@ tags:
 ```
 
 ### Type Tags
-```
+
+```text
 #permanent-note
 #reference-note
 #framework
@@ -122,6 +125,7 @@ tags:
 ```
 
 ### Always Include
+
 - Status tag
 - Type tag
 - Domain tag (if applicable)
@@ -132,7 +136,7 @@ tags:
 
 ### Inbox → Permanent Notes
 
-```
+```text
 Read → Extract Atomic Ideas → Create Permanent Notes → Link → Archive/Delete Source
 ```
 
@@ -157,15 +161,19 @@ Read → Extract Atomic Ideas → Create Permanent Notes → Link → Archive/De
 ## Quality Guardrails
 
 ### No Duplicates
+
 Before creating, search for existing notes on topic. Enhance rather than duplicate.
 
 ### No Orphans
+
 Every permanent note: minimum 3 links. If can't find 3 meaningful connections, question if note is valuable.
 
 ### Own Words Required
+
 Never copy-paste. Read → Close source → Write in own words.
 
 ### Keep It Short
+
 100-300 words. If exceeding 500, check atomicity - can it split?
 
 ---
@@ -198,6 +206,7 @@ Hub notes that organize permanent notes by topic.
 ```
 
 **Rules:**
+
 - 10+ permanent notes minimum
 - Update when new notes added to topic
 - Link permanent notes back to MOC
@@ -207,6 +216,7 @@ Hub notes that organize permanent notes by topic.
 ## Integration Points
 
 When executing skills:
+
 - `dump` → Creates raw capture in `00-Inbox/dumps/`
 - `recon` → Creates intel report in `Archives/Intelligence/recon/`
 - `refine` → Processes raw → permanent notes with links

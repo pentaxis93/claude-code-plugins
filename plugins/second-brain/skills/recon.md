@@ -11,6 +11,7 @@ Config: `.claude/brain-config.json` → `brainFolder`
 Check `_system/profile.md` and `_system/interests.md` exist. If not: prompt for /setup.
 
 Read:
+
 - `_system/profile.md` → name, role, active projects
 - `_system/interests.md` → topics, preferred sources
 - `_system/watchlist.md` (optional) → companies/people to track
@@ -40,17 +41,20 @@ Search based on user's interest profile. Focus on strategic relevance.
 ### 2. Analyze Relevance
 
 **Direct Impact (High Priority):**
+
 - News affecting user's projects or companies
 - Regulatory changes in user's industry
 - Competitive moves by direct competitors
 - Tech developments affecting user's stack
 
 **Strategic Impact (Medium Priority):**
+
 - Market trends affecting target customers
 - Investment patterns in industry
 - Partnership opportunities or threats
 
 **Contextual Impact (Lower Priority):**
+
 - Broader economic trends
 - Industry thought leadership
 - Educational content
@@ -205,6 +209,7 @@ items_count: {{number}}
 ### 5. Special Cases
 
 **No Recent News:**
+
 ```markdown
 ### {{Interest Area}}
 **No significant news in last 7 days**
@@ -214,6 +219,7 @@ Suggestion: Expand search or check {{alternatives}}
 ```
 
 **Unverified Information:**
+
 ```markdown
 ### {{Item}}
 **Unable to verify from independent sources**
@@ -227,6 +233,7 @@ Suggestion: Expand search or check {{alternatives}}
 ```
 
 **Conflicting Sources:**
+
 ```markdown
 ### {{Item}}
 **Conflicting information**
@@ -244,5 +251,6 @@ Suggestion: Expand search or check {{alternatives}}
 ### 6. Follow-up
 
 Suggest:
+
 - **dump skill** - Capture thoughts sparked by news
 - Project-specific analysis if news impacts active projects
