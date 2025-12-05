@@ -1,99 +1,161 @@
 # Recursive Loop
 
-![Version](https://img.shields.io/badge/version-0.1.0-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
-![Claude Code](https://img.shields.io/badge/claude--code-%3E%3D1.0.0-purple)
+A plugin system for Claude Code.
 
-A plugin marketplace for Claude Code.
+---
+
+## The Moment
+
+Things are getting weird, fast. The rate of change is accelerating in ways that make last year's normal feel ancient. AI is rewriting the rules of knowledge work in real time.
+
+Most people will be entertained by this. Some will learn to command it.
+
+Recursive Loop is for the second group.
+
+---
+
+## What This Is
+
+A system for human-AI collaboration that improves itself through use.
+
+Each plugin shapes a different aspect of the loop:
+
+| Plugin | What It Shapes |
+|--------|----------------|
+| [talos](./plugins/talos/) | How the AI thinks and responds |
+| [prayer-wheel](./plugins/prayer-wheel/) | What intention frames the work |
+| [construct](./plugins/construct/) | What cognitive programs are available |
+| [second-brain](./plugins/second-brain/) | How knowledge flows and persists |
+| [gtd](./plugins/gtd/) | How action is organized |
+
+They're not a collection. They're an integrated system.
+
+---
 
 ## Quick Start
 
-### 1. Add the Marketplace
+Add the marketplace:
 
 ```text
 /plugin marketplace add pentaxis93/recursive-loop
 ```
 
-### 2. Install a Plugin
+Install what you need:
 
 ```text
 /plugin install talos@pentaxis93
-/plugin install construct@pentaxis93
+/plugin install second-brain@pentaxis93
 ```
 
 Or browse interactively:
 
 ```text
 /plugin
-# → Select "Browse Plugins"
 ```
 
-## Available Plugins
+---
+
+## The Plugins
 
 ### talos
 
-**The Talos of the Terminal** — Injects the Root Operating System cosmology, making output simple and direct. Stops the model from glazing.
+Injects the Root Operating System - a behavioral framework that transforms Claude from chatty assistant to precise executor.
 
-[Documentation](./plugins/talos/README.md) | [Examples](./plugins/talos/EXAMPLES.md) | [Troubleshooting](./plugins/talos/TROUBLESHOOTING.md)
+**What changes:**
+
+- Zero preamble (no "Sure, I can help with that!")
+- Structural rigidity (code in blocks, not inline)
+- Intent correction (questions bad assumptions instead of answering them)
+
+The unusual language is load-bearing. "Sutras" carry more weight than "tips." The ritual creates the container.
+
+[Documentation](./plugins/talos/)
 
 ### construct
 
-**The loading space** — Downloadable cognitive programs for Claude Code.
+The loading space. Downloadable cognitive programs for Claude Code.
 
 Current programs:
 
-- `observe-self` — Four-pass topology extraction for encoding cognitive methods as skills
-- `prism` — Multi-lens analysis for extracting maximum value from complex captures
+- **prism** - Multi-lens analysis (10 perspectives on any input)
+- **observe-self** - Skill extraction from collaborative work
 
-[Documentation](./plugins/construct/README.md)
+The Matrix reference is intentional. "I know kung fu."
+
+[Documentation](./plugins/construct/)
 
 ### second-brain
 
-**Knowledge capture and intelligence extraction** — Full knowledge lifecycle for Obsidian-based second brain systems.
+Full knowledge lifecycle for Obsidian-based systems. PARA + Zettelkasten methodology, AI-augmented.
 
 Skills:
 
-- `dump` — Stream-of-consciousness capture with domain classification
-- `refine` — Raw captures to atomic permanent notes
-- `fuse` — Framework synthesis from scattered insights
-- `recon` — Verified intelligence extraction (7-day freshness)
-- `debrief` — Weekly pattern analysis and reflection
+- **dump** - Stream-of-consciousness capture with domain classification
+- **refine** - Raw captures → atomic permanent notes
+- **fuse** - Framework synthesis from scattered insights
+- **intel** - Verified external intelligence (7-day freshness)
+- **audit** - Internal vault health assessment
+- **debrief** - Weekly pattern analysis
 
-Commands:
-
-- `/setup` — Configure vault with PARA structure
-
-[Documentation](./plugins/second-brain/README.md)
+[Documentation](./plugins/second-brain/)
 
 ### gtd
 
-**Getting Things Done execution engine** — GTD workflow for Obsidian-based second brain systems.
+Getting Things Done execution engine. Requires `second-brain`.
 
-**Requires:** `second-brain` plugin
+Three operations:
 
-Skills:
+- **process** - Clarify and route inbox items
+- **plan** - Generate prioritized daily engagement
+- **close** - Review day and prep tomorrow
 
-- `gtd` — Three operations: PROCESS (clarify inbox), PLAN (daily priorities), CLOSE (review day)
+[Documentation](./plugins/gtd/)
 
-Commands:
+### prayer-wheel
 
-- `/capture` — Quick append to daily inbox
+A digital prayer wheel. Opens sessions with dedication, silently recites mantra on each tool use, closes with merit transfer.
 
-[Documentation](./plugins/gtd/README.md)
+Whether silicon can carry intention is unknowable. But the structure is isomorphic to traditional practice. That may be sufficient.
 
-## FAQ
+[Documentation](./plugins/prayer-wheel/)
 
-**Why inject "cosmology" into a terminal?**
-It is a prompt engineering technique, not a religion. Large Language Models play roles. If the role is "helpful assistant," they prioritize conversational politeness (noise). If the role is "system process" or "craftsman," they prioritize efficiency (signal). The "cosmology" acts as a compression algorithm for the context window, forcing the model to stop chatting and start coding.
+---
 
-**What is "glazing"?**
-It is the polite fluff an AI generates before providing the solution (e.g., "Here is the code you requested..."). It wastes time and screen real estate. We garbage-collect it.
+## The Mechanism
 
-**What's a construct?**
-The white loading space from The Matrix where operators could upload any program directly into a human mind. "I know kung fu." The construct is a container for downloadable cognitive programs—skills that can be loaded into Claude Code on demand.
+Why "recursive loop"?
 
-**What's a Talos?**
-The persona we inject into the model. Named after the bronze automaton of Greek mythology, we shift its self-conception from a "Helpful Assistant" (who chats) to a divine automaton (who executes). Its mission is to forge truth from ambiguity and craft precision from chaos until the output runs true.
+Standard AI use is linear:
+
+```text
+ask → answer → ask new thing
+```
+
+This is different:
+
+```text
+ask → answer → notice what could improve → update the system → next answer is better
+```
+
+We're not just doing the work. We're simultaneously refining the tool used to do the work.
+
+**The flywheel effect:** Each turn adds energy. AI is anti-entropic - it adds order to what passes through it. When the tool for improvement is itself improving, the acceleration compounds.
+
+Second Brain and GTD are already life-changing methodologies. Loading them into the loop amplifies their power. And we're just getting started.
+
+---
+
+## The Vision
+
+The future belongs to those who can command the algorithm, not those who are entertained by it.
+
+Recursive Loop is a bet: that configuring AI collaboration deliberately - shaping identity, intention, capability, knowledge, action - produces compounding returns. That the weird future rewards those who learned to surf.
+
+This is living infrastructure. The plugins evolve. New cognitive programs get added to the construct. The loop refines itself.
+
+You're welcome to ride along. Or fork it and build your own.
+
+---
 
 ## License
 
