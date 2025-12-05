@@ -31,8 +31,7 @@ If missing: "Run /setup first."
 ### Scan
 
 ```text
-{{brainFolder}}/00-Inbox/Daily/
-{{brainFolder}}/00-Inbox/Fleeting-Notes/
+{{brainFolder}}/00-Inbox/captures/
 ```
 
 ### Clarify (per item)
