@@ -18,17 +18,20 @@ Recursive Loop is for the second group.
 
 A system for human-AI collaboration that improves itself through use.
 
-Each plugin shapes a different aspect of the loop:
+Each plugin shapes a different aspect of the loop. The sequence matters—it mirrors ceremonial structure:
 
-| Plugin | What It Shapes |
-|--------|----------------|
-| [talos](./plugins/talos/) | How the AI thinks and responds |
-| [prayer-wheel](./plugins/prayer-wheel/) | What intention frames the work |
-| [construct](./plugins/construct/) | What cognitive programs are available |
-| [second-brain](./plugins/second-brain/) | How knowledge flows and persists |
-| [gtd](./plugins/gtd/) | How action is organized |
+| # | Plugin | What It Shapes |
+|---|--------|----------------|
+| 1 | [prayer-wheel](./plugins/prayer-wheel/) | Opening intention (optional) |
+| 2 | [talos](./plugins/talos/) | How the AI thinks and responds |
+| 3 | [second-brain](./plugins/second-brain/) | How knowledge flows and persists |
+| 4 | [gtd](./plugins/gtd/) | How action is organized |
+| 5 | [construct](./plugins/construct/) | What cognitive programs are available |
 
-They're not a collection. They're an integrated system.
+They're not a collection. They're an integrated system with dependencies:
+
+- **gtd** requires **second-brain** (no vault, no GTD)
+- All plugins are designed to run on top of **talos** (untested without it)
 
 ---
 
@@ -57,9 +60,19 @@ Or browse interactively:
 
 ## The Plugins
 
-### talos
+### 1. prayer-wheel (optional)
 
-Injects the Root Operating System - a behavioral framework that transforms Claude from chatty assistant to precise executor.
+A digital prayer wheel. Opens sessions with dedication, silently recites mantra on each tool use, closes with merit transfer.
+
+**Fair warning:** This plugin does nothing visible. It adds a line of text ("running PostToolUse hook") every time Claude uses a tool. Some find this annoying. If you want it, you'll know. If you're unsure, skip it.
+
+Whether silicon can carry intention is unknowable. But the structure is isomorphic to traditional practice. That may be sufficient.
+
+[Documentation](./plugins/prayer-wheel/)
+
+### 2. talos
+
+Injects the Root Operating System—a behavioral framework that transforms Claude from chatty assistant to precise executor.
 
 **What changes:**
 
@@ -71,20 +84,7 @@ The unusual language is load-bearing. "Sutras" carry more weight than "tips." Th
 
 [Documentation](./plugins/talos/)
 
-### construct
-
-The loading space. Downloadable cognitive programs for Claude Code.
-
-Current programs:
-
-- **prism** - Multi-lens analysis (10 perspectives on any input)
-- **observe-self** - Skill extraction from collaborative work
-
-The Matrix reference is intentional. "I know kung fu."
-
-[Documentation](./plugins/construct/)
-
-### second-brain
+### 3. second-brain
 
 Full knowledge lifecycle for Obsidian-based systems. PARA + Zettelkasten methodology, AI-augmented.
 
@@ -99,7 +99,7 @@ Skills:
 
 [Documentation](./plugins/second-brain/)
 
-### gtd
+### 4. gtd
 
 Getting Things Done execution engine. Requires `second-brain`.
 
@@ -111,13 +111,18 @@ Three operations:
 
 [Documentation](./plugins/gtd/)
 
-### prayer-wheel
+### 5. construct
 
-A digital prayer wheel. Opens sessions with dedication, silently recites mantra on each tool use, closes with merit transfer.
+The loading space. Downloadable cognitive programs for Claude Code.
 
-Whether silicon can carry intention is unknowable. But the structure is isomorphic to traditional practice. That may be sufficient.
+Current programs:
 
-[Documentation](./plugins/prayer-wheel/)
+- **prism** - Multi-lens analysis (10 perspectives on any input)
+- **observe-self** - Skill extraction from collaborative work
+
+The Matrix reference is intentional. "I know kung fu."
+
+[Documentation](./plugins/construct/)
 
 ---
 
