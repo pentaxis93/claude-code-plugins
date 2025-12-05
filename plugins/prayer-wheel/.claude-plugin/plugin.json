@@ -1,0 +1,20 @@
+{
+  "name": "prayer-wheel",
+  "version": "0.1.0",
+  "description": "A digital prayer wheel that injects Buddhist dedications and mantras into Claude Code sessions",
+  "author": {
+    "name": "pentaxis93",
+    "email": "kcmdwrrya@mozmail.com",
+    "url": "https://github.com/pentaxis93"
+  },
+  "repository": "https://github.com/pentaxis93/claude-code-plugins",
+  "homepage": "https://github.com/pentaxis93/claude-code-plugins#prayer-wheel",
+  "keywords": [
+    "prayer-wheel",
+    "buddhism",
+    "mantra",
+    "dedication",
+    "mindfulness"
+  ],
+  "license": "MIT"
+}
