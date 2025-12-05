@@ -38,6 +38,12 @@
       "source": "./plugins/prayer-wheel",
       "version": "0.1.0",
       "description": "A digital prayer wheel that injects Buddhist dedications and mantras into Claude Code sessions"
+    },
+    {
+      "name": "devtools",
+      "source": "./plugins/devtools",
+      "version": "0.1.0",
+      "description": "Developer tools for Claude Code customization"
     }
   ],
   "keywords": [
