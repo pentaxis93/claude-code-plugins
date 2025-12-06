@@ -126,8 +126,17 @@ git -C {{path}} push -u origin {{branch-name}}
 
 ### 2.4 Create PR
 
+Extract repo slug from remote URL:
+
 ```bash
-gh pr create --repo {{remote}} \
+git -C {{path}} remote get-url {{remote}}
+# Parse: git@github.com:owner/repo.git → owner/repo
+```
+
+Create PR:
+
+```bash
+gh pr create --repo {{owner/repo}} \
   --title "{{PR title}}" \
   --body "$(cat <<'EOF'
 ## Summary
