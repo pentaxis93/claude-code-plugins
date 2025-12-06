@@ -50,7 +50,7 @@ For EACH capture, execute this four-step ritual:
 
 Read and display the capture content. Show proposed routing:
 
-```
+```text
 [Capture content here]
 
 → Proposed: [Destination] as [task/project/reference]
@@ -295,12 +295,14 @@ Tomorrow-focused:
 ## Idempotence
 
 Running PLAN multiple times in one day:
+
 - Updates existing plan file (not creates new)
 - Temporal context shifts output appropriately
 - Each run is a fresh orientation to now
 - No state corruption, no duplicate files
 
 Running PLAN after skipped days:
+
 - Acknowledges gap matter-of-factly if relevant
 - Doesn't moralize about missed days
 - Just orients to present moment

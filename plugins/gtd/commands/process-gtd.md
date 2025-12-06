@@ -8,7 +8,7 @@ Trigger: "process inbox"
 
 ## Mode
 
-**Default: Interactive micro-ritual**
+### Default: Interactive micro-ritual
 
 - Process one item at a time
 - Present capture → Propose routing → Confirm with user → Execute
