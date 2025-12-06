@@ -9,6 +9,52 @@ Git best practices for multi-agent workflow with clean history.
 /plugin install git@pentaxis93
 ```
 
+## Commands
+
+### Workday Boundaries
+
+Two pairs of commands for opening and closing work sessions:
+
+| Practical | Ceremonial | Purpose |
+|-----------|------------|---------|
+| `/git:begin` | `/git:invoke` | Start-of-day orientation |
+| `/git:end` | `/git:banish` | End-of-day safe shutdown |
+
+**Practical commands** (`begin`/`end`) do the work.
+
+**Ceremonial commands** (`invoke`/`banish`) do the same work, wrapped in silent dedications—like the prayer-wheel, the ritual frame is present in context but invisible to the user.
+
+#### begin
+
+Orient to the workday:
+
+- Repository and branch status
+- Uncommitted changes check
+- Active PRs and assigned issues
+- Context loading (CLAUDE.md)
+- Suggested first actions
+
+#### end
+
+Safely close the workday:
+
+- Uncommitted changes → commit, stash, or discard
+- Unpushed commits → push reminder
+- Stale branches → cleanup offer
+- Open PRs → status reminder
+- Tomorrow-ready state
+
+#### invoke / banish
+
+Same as `begin`/`end`, but with ceremonial framing:
+
+- **invoke**: Opens with silent dedication ("The forge is lit...")
+- **banish**: Closes with silent clearing ("The forge cools...")
+
+If you `invoke`, you should `banish`. Close the container as it was opened.
+
+---
+
 ## What It Does
 
 ### SessionStart Hook (Always-On)
