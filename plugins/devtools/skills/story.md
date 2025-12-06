@@ -97,12 +97,14 @@ When uncertain whether to split or combine:
 ## The Anti-Pattern
 
 **NEVER:**
+
 ```bash
 git commit -m "feat(x): add feature"
 git commit -m "docs: update for feature"  # WRONG
 ```
 
 **ALWAYS:**
+
 ```bash
 git commit -m "feat(x): add feature
 
@@ -110,6 +112,7 @@ Includes documentation updates."
 ```
 
 `docs:` prefix only for:
+
 - Pure doc improvements (typos, clarity)
 - Doc infrastructure changes
 - Docs unrelated to code changes
