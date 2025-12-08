@@ -70,13 +70,15 @@ git -C {{path}} diff --cached --quiet
 ### Output
 
 **All pass:**
-```
+
+```text
 Preflight ✓ ({{main}}, synced, clean stage)
 Proceeding to RECON...
 ```
 
 **Any fail:**
-```
+
+```text
 Preflight ✗
 
 Problem: On branch 'feat/old-work', expected '{{main}}'
@@ -89,7 +91,7 @@ Plot halted. Re-run after fixing.
 
 When multiple repos configured, aggregate results:
 
-```
+```text
 Preflight Summary
 
 | Repo | Branch | Sync | Stage | Status |
