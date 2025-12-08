@@ -22,5 +22,6 @@
     "feedback-loop"
   ],
   "license": "MIT",
-  "skills": "./skills"
+  "skills": "./skills",
+  "commands": "./commands"
 }
