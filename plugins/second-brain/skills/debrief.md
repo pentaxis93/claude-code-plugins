@@ -37,7 +37,7 @@ Lead through reflection questions. Conversational, not clinical.
 
 **Ask via single `AskUserQuestion`** (multiSelect where appropriate):
 
-```
+```text
 Questions:
 1. "Rate this week 1-5" - options: 1, 2, 3, 4, 5
 2. "Biggest win?" - free text (Other)

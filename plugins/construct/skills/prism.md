@@ -41,6 +41,7 @@ RECON → EXTRACT → INTEGRATE
 **Principle:** [[User-Touch-Requirement]] - User cannot select lenses for material they haven't seen.
 
 After user sees content, observe:
+
 - What content types are present?
 - What domains does it span?
 - What's the complexity level?

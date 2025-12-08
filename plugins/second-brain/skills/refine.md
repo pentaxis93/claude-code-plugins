@@ -25,10 +25,12 @@ Scan for unprocessed content:
 Identify items with `status: "captured"` or `#status/fleeting`.
 
 **User must touch before deciding.** For each source found:
+
 - Short (<300 chars): Show full content
 - Long: Show title + first 2-3 lines + line count
 
 Present all sources with excerpts, then use `AskUserQuestion`:
+
 - "Process all"
 - "Select specific files" (if selected, follow up with which ones)
 - "Skip for now"
