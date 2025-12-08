@@ -42,7 +42,8 @@ Identify all options that merit serious consideration. This is a filtering pass.
 This is N passes, one per option. Each steelman is done in **isolation**—you are a partisan for that option only, without reference to the others.
 
 **Structure:**
-```
+
+```text
 Pass 2a: Steelman Option A (isolated)
 Pass 2b: Steelman Option B (isolated)
 Pass 2c: Steelman Option C (isolated)
@@ -52,6 +53,7 @@ Pass 2c: Steelman Option C (isolated)
 **Why isolation matters:** If you're thinking about Option B while steelmanning Option A, you'll unconsciously weaken A. Complete each advocacy before moving to the next.
 
 **Rules (per sub-pass):**
+
 - No hedging ("this could work if...")
 - No comparison to other options
 - No thinking about other options at all
@@ -69,6 +71,7 @@ Pass 2c: Steelman Option C (isolated)
 Now—and only now—evaluate. The winner is the option supported by the weight of evidence.
 
 **Evidence types:**
+
 - Known facts about the situation
 - User-provided constraints
 - Precedent from similar decisions
@@ -77,6 +80,7 @@ Now—and only now—evaluate. The winner is the option supported by the weight 
 **Key decision points:** If evidence is insufficient, identify what additional information would be decisive. Use `AskUserQuestion` to gather it.
 
 **Output:**
+
 1. Key decision point(s) identified
 2. Evidence gathered (via question or inference)
 3. Winner declared with reasoning
@@ -95,7 +99,7 @@ When evidence is needed, use `AskUserQuestion` with:
 
 **Example:**
 
-```
+```text
 Header: "Frequency"
 Question: "How often do you expect this situation to occur?"
 Options:
@@ -192,6 +196,7 @@ The evidence splits on **[key factor]**:
 ## Architecture Reference
 
 See [[pattern-isolated-subpasses]] and [[context-window-management-framework]] for:
+
 - When to use agent isolation vs sequential discipline
 - Agent prompt templates for steelman sub-passes
 - Context window management strategies
