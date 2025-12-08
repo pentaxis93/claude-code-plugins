@@ -234,29 +234,70 @@ EOF
 )"
 ```
 
-### 2.5 Await CI
+### 2.5 Monitor & Merge
+
+**Active monitoring with fast-path merge.**
 
 ```bash
-gh pr checks {{pr-number}} --watch
+# Poll CI status (10 second window)
+for i in {1..10}; do
+  CHECKS=$(gh pr checks {{pr-number}} 2>&1)
+  if echo "$CHECKS" | grep -q "pass.*pass.*pass"; then
+    # Fast-path: all checks passed
+    gh pr merge {{pr-number}} --squash --delete-branch
+    break
+  elif echo "$CHECKS" | grep -q "fail"; then
+    # CI failed - attempt remediation
+    break
+  fi
+  sleep 1
+done
 ```
 
-**If CI passes:** Report success, continue to next thread.
+#### Decision Matrix
 
-**If CI fails:**
+| CI Status @ 10s | Action |
+|-----------------|--------|
+| All SUCCESS | Auto-merge (squash), delete branch, continue |
+| Any FAILURE | Attempt fix (see remediation below) |
+| Still PENDING | Report to user, continue to next thread |
 
-1. Analyze failure output
-2. Attempt fix (max 3 attempts)
-3. Commit fix with message: `fix(ci): {{description}}`
-4. Push and re-check
-5. If still failing after 3 attempts: **park** the branch
+#### Remediation (on failure)
 
-### 2.6 Report
+1. Fetch failure output: `gh pr checks {{pr-number}} --json name,output`
+2. Analyze error (lint, test, build)
+3. Attempt fix (max 3 attempts)
+4. Commit: `fix(ci): {{description}}`
+5. Push and re-monitor (restart 10s window)
+6. If still failing after 3 attempts: report to user, continue
 
-For each thread:
+#### Report Format
 
-- PR URL
-- CI status
-- Any issues encountered
+After each PR (merged, pending, or failed):
+
+```text
+PR #{{number}}: {{title}}
+URL: {{url}}
+CI: {{status}} ({{duration}})
+Action: {{merged | pending | failed - reason}}
+```
+
+### 2.6 Thread Summary
+
+After all threads processed:
+
+```text
+## Plot Summary
+
+| PR | Title | CI | Action |
+|----|-------|----|----|
+| #42 | docs: goal taxonomy | ✓ 8s | Merged |
+| #43 | feat: PREFLIGHT | ✗ lint | Pending fix |
+
+Merged: 1
+Pending: 1
+Failed: 0
+```
 
 ---
 
