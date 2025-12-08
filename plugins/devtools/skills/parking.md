@@ -43,9 +43,9 @@ Read brain folder from `.claude/brain-config.json` → `brainFolder`.
 
 ---
 
-# PARK MODE
+## PARK MODE
 
-## When to Park
+### When to Park
 
 - Work blocked pending external input (research, user decision, voice notes)
 - Design decision needs more context
@@ -75,6 +75,7 @@ Collect before creating any files:
 Self-test before proceeding. Read gathered content as if you have no session context.
 
 Can you answer:
+
 1. What is this about?
 2. Why does it matter?
 3. How do I continue?
@@ -146,6 +147,7 @@ This single link marks the project as parked.
 ## Phase 4: CONFIRM
 
 Report to user:
+
 - "Parked [[Project-Name]]"
 - "Context saved at: {{parking-context-path}}"
 - "Awaiting: {{blocker}}"
@@ -153,9 +155,9 @@ Report to user:
 
 ---
 
-# UNPARK MODE
+## UNPARK MODE
 
-## Phase 1: LOCATE
+### Phase 1: LOCATE
 
 Find the parked project. Search in order:
 
@@ -200,6 +202,7 @@ Read the parking context file and verify:
 ### On gaps detected
 
 If ANY check fails:
+
 1. **DO NOT PROCEED** to implementation
 2. Use AskUserQuestion to gather missing context
 3. Optionally read `archives/sessions/{{session-id}}.jsonl` for details
