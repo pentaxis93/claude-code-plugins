@@ -36,9 +36,12 @@ If missing: "Run /setup first."
 
 ```text
 {{brainFolder}}/00-inbox/capture-*.md
+{{brainFolder}}/../brain/00-inbox/voice-transcripts/*.md
 ```
 
 One file = one capture. Process each file individually WITH USER.
+
+**Voice transcripts** follow verbatim mode (see below).
 
 ---
 
@@ -117,6 +120,47 @@ Only if user explicitly requests "batch process" or "process all automatically":
 3. Execute only after explicit approval
 
 Default is ALWAYS interactive micro-ritual.
+
+---
+
+### Voice Transcript Verbatim Mode
+
+For voice transcripts only, use verbatim processing:
+
+#### Why Verbatim
+
+User's own words carry nuance that summaries lose. What appears noisy to model is natural capture format for user.
+
+#### Flow
+
+1. **Split first** — If transcript contains multiple atomic items (distinct topics, separate actions), split into individual captures before processing
+2. **Show verbatim** — Display original text, truncated at ~500 words if longer
+3. **No pre-interpretation** — Do not summarize or propose routing
+4. **AskUserQuestion** — Let user determine action from their own words
+
+#### Verbatim Template
+
+```text
+---
+[Voice transcript verbatim - truncated if >500 words]
+---
+
+How should this be routed?
+- Actionable task → Project/Area
+- Knowledge/insight → Permanent note
+- Reference → Resources
+- Delete → Fragment/noise
+```
+
+#### Split Criteria
+
+Transcript contains multiple atomic items if:
+
+- Distinct topics discussed
+- Separate actionable items
+- Different contexts or projects mentioned
+
+Split BEFORE showing verbatim. Each split piece gets its own verbatim presentation.
 
 ---
 
