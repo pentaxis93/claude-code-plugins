@@ -38,31 +38,35 @@ Execute the full `end` command:
 
 After shutdown is confirmed, archive the session transcript:
 
-**3.1 Determine Transcript Path**
+#### 3.1 Determine Transcript Path
 
 The current session's transcript is at:
-```
+
+```text
 ~/.claude/projects/-home-pentaxis-src-{{project}}/{{session_id}}.jsonl
 ```
 
 Derive the path from the current working directory and session context.
 
-**3.2 Generate Semantic Label**
+#### 3.2 Generate Semantic Label
 
 Based on the session's content, create a brief semantic label (2-5 words, kebab-case):
+
 - Focus on the primary work accomplished
 - Examples: `implement-fuse-skill`, `gtd-inbox-processing`, `vault-structure-refactor`
 
-**3.3 Compile Note Lists**
+#### 3.3 Compile Note Lists
 
 From session memory, compile:
+
 - **Notes created:** Files written to vault that didn't exist before
 - **Notes edited:** Existing vault files modified
 - **Intelligence artifacts:** Any `_talos/` files created or updated
 
-**3.4 Execute Archive**
+#### 3.4 Execute Archive
 
 Run the transcript archive script:
+
 ```bash
 ~/.claude/hooks/transcript-archive.sh \
     "{{transcript_path}}" \
@@ -73,7 +77,7 @@ Run the transcript archive script:
     "{{intelligence}}"
 ```
 
-**3.5 Update Affected Notes (Bidirectional Linking)**
+#### 3.5 Update Affected Notes (Bidirectional Linking)
 
 For each note in `notes_created` and `notes_edited`, update the `_talos:` frontmatter property:
 
@@ -85,10 +89,11 @@ _talos:
 
 If `_talos:` already exists, append to the `transcripts` list.
 
-**3.6 Report Archive**
+#### 3.6 Report Archive
 
 Confirm to user:
-```
+
+```text
 Transcript archived: _talos/transcripts/{{date}}-{{time}}-{{label}}.md
 ```
 
