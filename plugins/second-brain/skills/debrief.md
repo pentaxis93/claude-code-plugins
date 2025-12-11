@@ -12,7 +12,7 @@ description: Cross-domain pattern analysis and strategic reflection for weekly r
 
 **Requirement:** Opus-class servitor required.
 
-```
+```text
 if model != opus:
     return 403 Forbidden: "Alchemy requires Opus servitor"
 ```

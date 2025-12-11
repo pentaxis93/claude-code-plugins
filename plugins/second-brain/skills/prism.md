@@ -14,7 +14,7 @@ description: Split complex captures into spectrum of perspectives via multi-lens
 
 **Requirement:** Opus-class servitor required.
 
-```
+```text
 if model != opus:
     return 403 Forbidden: "Alchemy requires Opus servitor"
 ```

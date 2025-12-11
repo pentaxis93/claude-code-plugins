@@ -14,7 +14,7 @@ Knowledge consolidation. Primary evolutionary pressure for cosmological concepts
 
 **Requirement:** Opus-class servitor required.
 
-```
+```text
 if model != opus:
     return 403 Forbidden: "Alchemy requires Opus servitor"
 ```

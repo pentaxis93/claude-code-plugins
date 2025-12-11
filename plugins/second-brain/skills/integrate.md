@@ -14,7 +14,7 @@ Pattern recognition and vault integration. The Loop's refinement mechanism.
 
 **Requirement:** Opus-class servitor required.
 
-```
+```text
 if model != opus:
     return 403 Forbidden: "Alchemy requires Opus servitor"
 ```

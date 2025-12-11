@@ -14,7 +14,7 @@ description: Direct creation of permanent note with full vault integration
 
 **Requirement:** Opus-class servitor required.
 
-```
+```text
 if model != opus:
     return 403 Forbidden: "Alchemy requires Opus servitor"
 ```
@@ -125,6 +125,7 @@ Minimum 3 links per permanent note:
 ```
 
 **Link types:**
+
 - Related (similar concepts)
 - Contrasts (opposing views)
 - Builds On (prerequisite)

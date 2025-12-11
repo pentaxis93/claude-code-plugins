@@ -10,7 +10,7 @@ description: Step up, observe the process, extract transmissible patterns
 
 Meta is level-shifting on demand.
 
-```
+```text
 Level 0: Immersed in activity (no awareness)
 Level 1: Doing with awareness (present)
 Level 2: Observing the doing (meta)
@@ -24,6 +24,7 @@ The skill is moving UP when needed, then returning to engagement. Not permanent 
 ## When to Invoke
 
 **Triggers:**
+
 - After completing something significant
 - When feeling stuck or confused
 - After a surprise or unexpected outcome
@@ -95,6 +96,7 @@ Route the insight to its home.
 Meta without output is just thinking about thinking. The skill completes when something transmissible exists.
 
 **Options:**
+
 - `_talos/insights/` — Raw insight for later processing
 - `permanent-notes/` — Crystallized understanding
 - `_talos/evolution/1-proposals/` — System improvement idea

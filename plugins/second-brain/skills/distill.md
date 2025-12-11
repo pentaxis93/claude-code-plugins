@@ -12,7 +12,7 @@ description: Extract themed content into alembics for focused fusion
 
 **Requirement:** Opus-class servitor required.
 
-```
+```text
 if model != opus:
     return 403 Forbidden: "Alchemy requires Opus servitor"
 ```
