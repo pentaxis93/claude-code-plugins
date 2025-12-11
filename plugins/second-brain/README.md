@@ -1,6 +1,8 @@
 # Second Brain
 
-Knowledge capture and intelligence extraction for Obsidian-based systems.
+Knowledge lifecycle and task management for Obsidian-based vaults.
+
+Combines **Second Brain** (PARA + Zettelkasten) with **GTD** (Getting Things Done) into a unified system.
 
 ## Installation
 
@@ -40,6 +42,24 @@ Configure Second Brain vault with plugin-aware modules.
 **Idempotent:** Install a new plugin later? Run `/setup` again — it detects what's missing and adds it.
 
 **Run again to update:** profile, interests, relationships, add modules, or switch vault.
+
+## GTD Commands
+
+### /second-brain:capture
+
+Quick capture to inbox. Pure collection, no processing.
+
+### /second-brain:process-gtd
+
+Clarify and route inbox items using GTD methodology.
+
+### /second-brain:plan-gtd
+
+Generate prioritized daily plan based on context and energy.
+
+---
+
+## Knowledge Commands
 
 ### /second-brain:dump
 

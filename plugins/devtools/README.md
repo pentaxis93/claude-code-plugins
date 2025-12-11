@@ -1,6 +1,6 @@
 # devtools
 
-Developer tools for Claude Code customization.
+Developer tools and git workflows for Claude Code.
 
 ## Installation
 
@@ -44,6 +44,40 @@ To disable the custom status line:
 
 1. Remove `statusLine` from `~/.claude/settings.json`
 2. Delete `~/.claude/statusline.sh` (optional)
+
+---
+
+## Git Commands
+
+### Workday Boundaries
+
+| Practical | Ceremonial | Purpose |
+|-----------|------------|---------|
+| `/devtools:begin` | `/devtools:invoke` | Start-of-day orientation |
+| `/devtools:end` | `/devtools:banish` | End-of-day safe shutdown |
+
+**Practical commands** (`begin`/`end`) do the work.
+**Ceremonial commands** (`invoke`/`banish`) wrap the work in silent dedications.
+
+### Other Commands
+
+- `/devtools:story` - Craft atomic commits from uncommitted changes
+- `/devtools:plot` - Weave stories into PRs across repositories
+- `/devtools:status` - Check git and PR status across managed repos
+- `/devtools:park` - Park work with full context for later
+- `/devtools:unpark` - Resume parked work with context validation
+- `/devtools:decide` - Three-pass decision method
+
+---
+
+## Git Skills
+
+- **conflict-resolution** - Resolve merge conflicts systematically
+- **history-surgery** - Rebase, squash, and history manipulation
+- **recovery** - Recover from git disasters
+- **worktree** - Manage multiple worktrees
+
+---
 
 ## Dependencies
 
