@@ -18,19 +18,19 @@ Recursive Loop is for the second group.
 
 A system for human-AI collaboration that improves itself through use.
 
-Each plugin shapes a different aspect of the loop. The sequence matters—it mirrors ceremonial structure:
+Each plugin shapes a different aspect of the loop:
 
 | # | Plugin | What It Shapes |
 |---|--------|----------------|
 | 1 | [prayer-wheel](./plugins/prayer-wheel/) | Opening intention (optional) |
 | 2 | [talos](./plugins/talos/) | How the AI thinks and responds |
-| 3 | [second-brain](./plugins/second-brain/) | How knowledge flows and persists |
-| 4 | [gtd](./plugins/gtd/) | How action is organized |
-| 5 | [construct](./plugins/construct/) | What cognitive programs are available |
+| 3 | [second-brain](./plugins/second-brain/) | How knowledge and action flow |
+| 4 | [construct](./plugins/construct/) | What cognitive programs are available |
+| 5 | [devtools](./plugins/devtools/) | Developer workflows and git |
 
-They're not a collection. They're an integrated system with dependencies:
+They're not a collection. They're an integrated system:
 
-- **gtd** requires **second-brain** (no vault, no GTD)
+- **second-brain** includes GTD (knowledge + action unified)
 - All plugins are designed to run on top of **talos** (untested without it)
 
 ---
@@ -86,12 +86,17 @@ The unusual language is load-bearing. "Sutras" carry more weight than "tips." Th
 
 ### 3. second-brain
 
-Full knowledge lifecycle for Obsidian-based systems. PARA + Zettelkasten methodology, AI-augmented.
+Full knowledge lifecycle + GTD for Obsidian-based systems. PARA + Zettelkasten + Getting Things Done, unified.
 
-Skills:
+**GTD operations:**
+
+- **capture** - Quick capture to inbox
+- **process** - Clarify and route inbox items
+- **plan** - Generate prioritized daily engagement
+
+**Knowledge operations:**
 
 - **dump** - Stream-of-consciousness capture with domain classification
-- **refine** - Raw captures → atomic permanent notes
 - **fuse** - Framework synthesis from scattered insights
 - **intel** - Verified external intelligence (7-day freshness)
 - **audit** - Internal vault health assessment
@@ -99,19 +104,7 @@ Skills:
 
 [Documentation](./plugins/second-brain/)
 
-### 4. gtd
-
-Getting Things Done execution engine. Requires `second-brain`.
-
-Three operations:
-
-- **process** - Clarify and route inbox items
-- **plan** - Generate prioritized daily engagement
-- **close** - Review day and prep tomorrow
-
-[Documentation](./plugins/gtd/)
-
-### 5. construct
+### 4. construct
 
 The loading space. Downloadable cognitive programs for Claude Code.
 
@@ -123,6 +116,23 @@ Current programs:
 The Matrix reference is intentional. "I know kung fu."
 
 [Documentation](./plugins/construct/)
+
+### 5. devtools
+
+Developer tools and git workflows.
+
+**Git operations:**
+
+- **begin/invoke** - Start-of-day orientation
+- **end/banish** - End-of-day safe shutdown
+- **story** - Craft atomic commits from uncommitted changes
+- **status** - Check git and PR status across repos
+
+**Tools:**
+
+- **statusline** - Minimal status line (model + working directory)
+
+[Documentation](./plugins/devtools/)
 
 ---
 
