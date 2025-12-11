@@ -15,6 +15,7 @@ Config: `.claude/brain-config.json` → `brainFolder`
 Check `{{brainFolder}}/02-areas/Profile.md` exists. If not: prompt for /setup.
 
 Parse scope argument:
+
 - `full` (default) - All checks
 - `links` - Dead links, broken embeds only
 - `orphans` - Unlinked notes only
@@ -31,6 +32,7 @@ These produce facts, not opinions.
 #### Dead Links
 
 Scan all `.md` files for `[[wikilinks]]`:
+
 - Extract link targets
 - Check if target file exists
 - Report broken links with source file and line number
@@ -38,12 +40,14 @@ Scan all `.md` files for `[[wikilinks]]`:
 #### Broken Embeds
 
 Scan for `![[embed]]` syntax:
+
 - Check if embedded file exists
 - Report missing embeds with source location
 
 #### Orphan Detection
 
 For each note in `permanent-notes/`, `05-knowledge/`:
+
 - Count inbound links (other files linking TO this note)
 - Flag notes with zero inbound links
 - Exclude system directories: `.obsidian/`, `_talos/`, `templates/`
@@ -51,6 +55,7 @@ For each note in `permanent-notes/`, `05-knowledge/`:
 #### Frontmatter Validation
 
 For each `.md` file:
+
 - Check YAML block exists and parses
 - Verify required fields by note type:
   - permanent-note: `title`, `created`, `type`, `tags`
@@ -62,12 +67,14 @@ For each `.md` file:
 #### Empty Notes
 
 Flag files with:
+
 - Only frontmatter, no body content
 - Body content < 50 characters (excluding frontmatter)
 
 #### Duplicate Detection
 
 Hash note content (excluding frontmatter):
+
 - Flag exact duplicates
 - Flag near-duplicates (>80% similarity by line overlap)
 - Report pairs with similarity score
@@ -79,6 +86,7 @@ These require human decision. Flag, don't fix.
 #### Stale Content
 
 Notes meeting ALL criteria:
+
 - Last modified >90 days ago
 - Zero inbound links
 - Not in `archives/` or `templates/`
@@ -88,6 +96,7 @@ Present for review: archive, update, or intentional dormancy?
 #### MOC Coverage
 
 Scan topic clusters:
+
 - Count notes sharing common tags or link neighborhoods
 - Flag clusters of 5+ notes with no MOC
 - Suggest MOC creation candidates
@@ -95,6 +104,7 @@ Scan topic clusters:
 #### Link Density
 
 For permanent notes:
+
 - Count outbound links
 - Flag notes with <3 outbound links (Zettelkasten minimum)
 - Present for review: isolated by design or missing connections?
@@ -102,6 +112,7 @@ For permanent notes:
 #### Tag Sprawl
 
 Aggregate all tags across vault:
+
 - Count usage per tag
 - Flag tags used only 1-2 times
 - Present for review: consolidate, delete, or emerging category?
@@ -109,6 +120,7 @@ Aggregate all tags across vault:
 #### Archive Candidates
 
 Identify:
+
 - Projects with `status: completed` not in `archives/`
 - Projects with all tasks checked
 - Reference notes >180 days old with zero recent links
@@ -120,16 +132,19 @@ Present for review: ready for archive?
 Sort findings into priority tiers:
 
 **Critical (Broken Functionality):**
+
 - Dead links in active projects
 - Broken embeds
 - Malformed frontmatter preventing parsing
 
 **Moderate (Degraded Quality):**
+
 - Orphaned permanent notes
 - Near-duplicate content
 - Stale MOCs
 
 **Minor (Aesthetic):**
+
 - Tag inconsistency
 - Missing optional frontmatter fields
 - Low link density
@@ -197,9 +212,11 @@ tags:
 ### Structure Recommendations
 
 **MOC Candidates:**
+
 - {{topic cluster}}: {{n}} notes, no organizing structure
 
 **Low Link Density:**
+
 - {{file}}: {{n}} outbound links (minimum 3 recommended)
 
 ### Tag Sprawl
@@ -243,10 +260,12 @@ tags:
 If user approves mechanical fixes:
 
 **Auto-fixable operations:**
+
 - Insert missing frontmatter from templates
 - (Future: fix simple broken links if unambiguous target exists)
 
 **Never auto-execute:**
+
 - Deletions
 - Archives (file moves)
 - Merges
